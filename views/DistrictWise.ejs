@@ -1,0 +1,25 @@
+<%= data["districtData"] %>
+
+<h1><%=state%></h1>
+
+
+<table border="2px solid black">
+  <thead>
+    <th>District</th>
+    <th>Total Confirmed Cases</th>
+    <th>Recovered</th>
+    <th>Deaths</th>
+    <th>Active Cases</th>
+  </thead>
+  <tbody>
+    <% for(district in data["districtData"]){ %>
+      <tr>
+        <td>  <%=district%>  </td>
+        <td><%= data["districtData"][district]["confirmed"] %> </td>
+        <td><%= data["districtData"][district]["recovered"] %> </td>
+        <td><%= data["districtData"][district]["deceased"] %>    </td>
+        <td><%= data["districtData"][district]["active"] %>    </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>

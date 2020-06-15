@@ -1,0 +1,28 @@
+<%= data["statewise"][0]["confirmed"] %>
+<%= data["statewise"][0]["recovered"] %>
+<%= data["statewise"][0]["deaths"] %>
+<%= data["statewise"][0]["active"] %>
+
+<table border="2px solid black">
+  <thead>
+    <th>State</th>
+    <th>Total Confirmed Cases</th>
+    <th>Recovered</th>
+    <th>Deaths</th>
+    <th>Active Cases</th>
+  </thead>
+  <tbody>
+    <% for(state of data["statewise"]){ %>
+      <tr>
+        <td><a href="/District-wise/<%=state["state"]%>"><%= state["state"] %></a>    </td>
+        <td><%= state["confirmed"] %> </td>
+        <td><%= state["recovered"] %> </td>
+        <td><%= state["deaths"] %>    </td>
+        <td><%= state["active"] %>    </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+
+<p>https://api.covid19india.org/state_district_wise.json</p>

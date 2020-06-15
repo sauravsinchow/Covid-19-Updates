@@ -6,7 +6,9 @@ app.set("view engine","ejs");
 app.use(express.static("public"));
 
 
-
+app.get("/",(req,res)=>{
+  res.render("Home");
+})
 
 app.get("/Covid-19",(req,res)=>{
   request("https://api.covid19india.org/data.json",(error,response,body)=>{

@@ -10,6 +10,10 @@ app.get("/",(req,res)=>{
   res.render("Home");
 })
 
+app.get("/Contact",(req,res)=>{
+  res.
+})
+
 app.get("/Covid-19",(req,res)=>{
   request("https://api.covid19india.org/data.json",(error,response,body)=>{
     var data=JSON.parse(body);

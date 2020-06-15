@@ -11,7 +11,7 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/Contact",(req,res)=>{
-  res.
+  res.render("Contact")
 })
 
 app.get("/Covid-19",(req,res)=>{
